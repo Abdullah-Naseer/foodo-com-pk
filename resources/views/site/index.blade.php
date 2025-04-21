@@ -40,7 +40,8 @@
                             </li>
                             <li>
                                 <a target="_blank" href="https://www.linkedin.com/company/foodoofficial1/">
-                                    <img src="{{ asset('public/assets/images/social/In.svg') }}" alt="img" class="w-75 me-3">
+                                    <img src="{{ asset('public/assets/images/social/In.svg') }}" alt="img"
+                                        class="w-75 me-3">
                                 </a>
                             </li>
                         </ul>
@@ -129,7 +130,7 @@
                         <br>
                         <div class="banner-home-button pb-3">
                             <a href="{{ url('about-us
-                            ') }}"
+                                                                                    ') }}"
                                 class="btn btn-site-primary w-auto text-uppercase px-5 py-3 fs-5 booking-btn">About Us</a>
                         </div>
                     </div>
@@ -143,7 +144,7 @@
         </div>
     </div>
 
-    <div class="rts-about-area rts-section-gapTopBotm" style="background-color: #F9F7F2;" id="services">
+    {{-- <div class="rts-about-area rts-section-gapTopBotm" style="background-color: #F9F7F2;" id="services">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-5">
@@ -266,7 +267,7 @@
 
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <!-- menu area start -->
     <div class="rts-about-area rts-section-gapTopBotm bg-white menu-bg" id="menu-section">
@@ -452,11 +453,10 @@
     </div>
     <!-- end menu area start -->
 
-    {{-- <div class="rts-about-area rts-section-gapTopBotm"> --}}
-    <div class="rts-about-area">
+    <div class="rts-about-area rts-section-gapTopBotm">
         <div class="container">
             {{-- hide our services --}}
-            {{-- <div class="row">
+            <div class="row">
                 <div class="col-md-12 text-center">
                     <span class="w-foods-itilanio">Our Work</span>
                     <h3 class="p-title">Our Working Proccess</h3>
@@ -510,7 +510,7 @@
                     <p class="desc px-5 fs-5">Order the flavorful food and enjoy it with your team and boost the energy
                         of your workspace.</p>
                 </div>
-            </div> --}}
+            </div>
 
             <!-- Mobile Carousel View -->
             <div id="workingProcessCarousel" class="carousel slide d-md-none" data-bs-ride="carousel">

@@ -15,11 +15,11 @@
                                 <nav>
                                     <ul>
                                         <li><a class="nav-link" href="{{ url('/') }}">Home</a></li>
-                                        <li><a class="nav-link" href="{{ url('about-us') }}">About Us</a></li>
                                         {{-- <li><a class="nav-link" href="#services">Services</a></li> --}}
                                         <li><a class="nav-link" href="{{ url('/') }}#menu-section">Menu</a></li>
                                         {{-- <li><a class="nav-link" href="#pricing">Pricing</a></li> --}}
                                         <li><a class="nav-link" href="{{ url('blogs') }}">Blog</a></li>
+                                        <li><a class="nav-link" href="{{ url('about-us') }}">About Us</a></li>
                                         <li><a class="nav-link" href="{{ url('contact-us') }}">Contact</a></li>
                                     </ul>
                                 </nav>
