@@ -20,7 +20,8 @@ use App\Http\Controllers\Admin\CkeditorController;
 
 
 // admin
-Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth'], function () {
+Route::group(['prefix' => 'admin',
+'as' => 'admin.', 'middleware' => 'auth'], function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/history', [DashboardController::class, 'history'])->name('history');
     Route::get('/sitemap', [DashboardController::class, 'sitemap'])->name('sitemap');
@@ -56,6 +57,8 @@ Route::get('/order-details/{mealPlan}', [SiteOrderController::class, 'orderDetai
 Route::get('blogs/{slug?}', [SiteBlogsController::class , 'getIndex'])->name('blogs.index');
 Route::get('/search', [SiteBlogsController::class, 'searchBlog'])->name('search');
 Route::get('/{category}/blogs', [SiteBlogsController::class , 'getByCategory'])->name('blogs.category');
+Route::post('/contact-submit', [PagesController::class, 'contactForm'])->name('contactForm');
+
 Route::get('/{slug?}', [PagesController::class, 'show'])->where('slug', '^(?!(admin|logout|login)(\/|$))[A-Za-z0-9+-_\/]+')->name('page');
 });
 

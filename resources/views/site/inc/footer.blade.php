@@ -7,9 +7,8 @@
                     <div class="main-footer-wrapper-one">
                         <div class="single-footer-wized-one logo-area" data-sal="slide-up" data-sal-delay="150"
                             data-sal-duration="800">
-                            <a href="{{ url("/") }}" class="logo">
-                                <img src="{{ asset('public/assets/images/footer/logo.webp') }}"
-                                    alt="logo">
+                            <a href="{{ url('/') }}" class="logo">
+                                <img src="{{ asset('public/assets/images/footer/logo.webp') }}" alt="logo">
                             </a>
                             <p class="disc-f fs-4">
                                 The best catering and meal services provider.
@@ -18,10 +17,13 @@
                                 <ul>
                                     <li class="fs-4">
                                         <i class="fa-solid fa-location-dot"></i>
-                                        Office 1506, Al Hafeez Executive, 30 Firdous Mkt Rd, Block C3 Block C 3 Gulberg III, Lahore, Punjab 54760, Pakistan
+                                        Office 1506, Al Hafeez Executive, 30 Firdous Mkt Rd, Block C3 Gulberg III,
+                                        Lahore, Punjab 54760, Pakistan
                                     </li>
                                     <li class="fs-4"><a href="mailto:info@foodo.com.pk"><i
                                                 class="fa-solid fa-envelope"></i>info@foodo.com.pk</a></li>
+                                    <li class="fs-4"><a href="tel:tel:+92 337 0777019"><i
+                                                class="fa-solid fa-phone"></i>+92 337 0777019</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -32,11 +34,13 @@
                                 <h6 class="title p-0 ps-md-5">Quick Links</h6>
                                 <div class="pages">
                                     <ul>
-                                        <li><a href="#about"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
-                                        <li><a href="#services"><i class="fa-solid fa-angle-right"></i> Services</a></li>
+                                        <li><a href="{{ url('about-us') }}"><i class="fa-solid fa-angle-right"></i>
+                                                About Us</a></li>
+                                        {{-- <li><a href="#services"><i class="fa-solid fa-angle-right"></i> Services</a></li> --}}
                                         <li><a href="#menu-section"><i class="fa-solid fa-angle-right"></i>Menu</a></li>
-                                        <li><a href="#pricing"><i class="fa-solid fa-angle-right"></i> Pricing</a></li>
-                                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> Contact Us</a></li>
+                                        {{-- <li><a href="#pricing"><i class="fa-solid fa-angle-right"></i> Pricing</a></li> --}}
+                                        <li><a href="{{ url('contact-us') }}"><i class="fa-solid fa-angle-right"></i>
+                                                Contact Us</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -47,11 +51,13 @@
                                 <h6 class="title p-0 ps-md-5">Useful Links</h6>
                                 <div class="pages">
                                     <ul>
-                                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> Privacy Policy</a></li>
-                                        <li><a href="#"><i class="fa-solid fa-angle-right"></i>Terms and Conditions</a></li>
-                                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> Disclaimer</a></li>
-                                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> Elemets</a></li>
-                                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> Support</a></li>
+                                        <li><a href="{{ url('faqs') }}"><i class="fa-solid fa-angle-right"></i>
+                                                Faqs</a>
+                                        <li><a href="{{ url('privacy-policy') }}"><i
+                                                    class="fa-solid fa-angle-right"></i> Privacy Policy</a>
+                                        </li>
+                                        <li><a href="{{ url('terms-and-conditions') }}"><i
+                                                    class="fa-solid fa-angle-right"></i>Terms and Conditions</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -65,15 +71,47 @@
                                 </p>
                                 <div class="get-touch">
                                     <div class="d-flex my-5">
-                                        <input type="text" class="from-control bg-white form-control-lg w-75" placeholder="Enter Your Email" style="height: 50px;">
-                                        <button class="btn btn-warning border-none w-auto px-5 fs-4 rounded-0">Send</button>
+                                        <input type="text" class="from-control bg-white form-control-lg w-75"
+                                            placeholder="Enter Your Email" style="height: 50px;">
+                                        <button
+                                            class="btn btn-warning border-none w-auto px-5 fs-4 rounded-0">Send</button>
                                     </div>
+
+
                                     <div class="rts-social-wrapper m-0 d-flex align-items-center text-white fs-4">
-                                        Payment:
-                                      <ul class="ps-4">
-                                            <li><img src="{{ asset("public/assets/images/footer/cash.svg") }}" alt="cash icon" class="mb-2" width="18" height="16" class="mb-2"></li>
+                                        Follow Our Socials:
+                                        <ul class="d-flex list-unstyled m-0">
+                                            <li>
+                                                <a target="_blank" href="https://www.facebook.com/foodoofficial1/">
+                                                    <img src="{{ asset('public/assets/images/social/facebook.webp') }}"
+                                                        alt="img" class="w-75 me-3">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a target="_blank" href="https://www.instagram.com/foodoofficial1/">
+                                                    <img src="{{ asset('public/assets/images/social/instagram.webp') }}"
+                                                        alt="img" class="w-75 me-3">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a target="_blank"
+                                                    href="https://www.linkedin.com/company/foodoofficial1/">
+                                                    <img src="{{ asset('public/assets/images/social/In.svg') }}"
+                                                        alt="img" class="w-75 me-3">
+                                                </a>
+                                            </li>
                                         </ul>
                                     </div>
+
+                                    <div class="rts-social-wrapper m-0 d-flex align-items-center text-white fs-4">
+                                        Payment:
+                                        <ul class="ps-4">
+                                            <li><img src="{{ asset('public/assets/images/footer/cash.svg') }}"
+                                                    alt="cash icon" class="mb-2" width="18" height="16"
+                                                    class="mb-2"></li>
+                                        </ul>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -116,7 +154,8 @@
         <div class="container">
             <div class="search-input-inner">
                 <div class="input-div">
-                    <input id="searchInput1" class="search-input" type="text" placeholder="Search by keyword or #">
+                    <input id="searchInput1" class="search-input" type="text"
+                        placeholder="Search by keyword or #">
                     <button><i class="far fa-search"></i></button>
                 </div>
             </div>
@@ -129,38 +168,40 @@
     </div>
 
 
-<!-- Cookie Consent Banner -->
-<div id="cookie-banner" class="position-fixed bottom-0 bg-dark text-white p-3 rounded shadow-lg d-none mb-sm-4 ms-sm-5">
-    <div>
-        <strong>We use cookies!</strong> <p class="p-title text-white">This website uses cookies to ensure you get the best experience.</p>
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner"
+        class="position-fixed bottom-0 bg-dark text-white p-3 rounded shadow-lg d-none mb-sm-4 ms-sm-5">
+        <div>
+            <strong>We use cookies!</strong>
+            <p class="p-title text-white">This website uses cookies to ensure you get the best experience.</p>
+        </div>
+        <div class="mt-2 text-end">
+            <button class="btn btn-success btn-sm me-2" onclick="acceptCookies()">Accept</button>
+            <button class="btn btn-danger btn-sm" onclick="rejectCookies()">Reject</button>
+        </div>
     </div>
-    <div class="mt-2 text-end">
-        <button class="btn btn-success btn-sm me-2" onclick="acceptCookies()">Accept</button>
-        <button class="btn btn-danger btn-sm" onclick="rejectCookies()">Reject</button>
-    </div>
-</div>
 
 
-@push('scripts')
-<script>
-    function acceptCookies() {
-        document.cookie = "user_cookie_consent=accepted; path=/; max-age=" + (60*60*24*365); // 1 year
-        hideBanner();
-    }
+    @push('scripts')
+        <script>
+            function acceptCookies() {
+                document.cookie = "user_cookie_consent=accepted; path=/; max-age=" + (60 * 60 * 24 * 365); // 1 year
+                hideBanner();
+            }
 
-    function rejectCookies() {
-        document.cookie = "user_cookie_consent=rejected; path=/; max-age=" + (60*60*24*365); // 1 year
-        hideBanner();
-    }
+            function rejectCookies() {
+                document.cookie = "user_cookie_consent=rejected; path=/; max-age=" + (60 * 60 * 24 * 365); // 1 year
+                hideBanner();
+            }
 
-    function hideBanner() {
-        document.getElementById('cookie-banner').classList.add('d-none');
-    }
+            function hideBanner() {
+                document.getElementById('cookie-banner').classList.add('d-none');
+            }
 
-    // Show banner if user hasn't made a choice
-    if (!document.cookie.includes("user_cookie_consent=accepted") && !document.cookie.includes("user_cookie_consent=rejected")) {
-        document.getElementById('cookie-banner').classList.remove('d-none');
-    }
-</script>
-@endpush
-
+            // Show banner if user hasn't made a choice
+            if (!document.cookie.includes("user_cookie_consent=accepted") && !document.cookie.includes(
+                    "user_cookie_consent=rejected")) {
+                document.getElementById('cookie-banner').classList.remove('d-none');
+            }
+        </script>
+    @endpush

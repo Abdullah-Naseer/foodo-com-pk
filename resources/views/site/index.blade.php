@@ -11,7 +11,7 @@
                                 Your Office</span></h1>
                         <p class="desc fs-1">Make Your Teams Happy with Ghar ka Khana</p>
                         <div class="banner-home-button d-flex">
-                            <a href="tel:+92 337 0777019" class="order-btn-contact text-uppercase">Contact Us</a>
+                            <a href="{{ url('contact-us') }}" class="order-btn-contact text-uppercase">Contact Us</a>
                             <a href="#menu-section" class="order-btn-see-menu text-uppercase">SEE Menu</a>
                         </div>
                         <div></div>
@@ -19,7 +19,8 @@
                 </div>
                 <div class="col-lg-6">
                     <div class=" d-none d-md-block" data-sal="zoom-in" data-sal-delay="600" data-sal-duration="600">
-                        <img src="{{ asset('public/assets/images/banner/home-banner-image.webp') }}"  alt="banner-right-image">
+                        <img src="{{ asset('public/assets/images/banner/home-banner-image.webp') }}"
+                            alt="banner-right-image">
                     </div>
                 </div>
                 <div class="col-lg-12">
@@ -37,9 +38,9 @@
                                         class="w-75 me-3">
                                 </a>
                             </li>
-                            <li class="d-none">
+                            <li>
                                 <a target="_blank" href="https://www.linkedin.com/company/foodoofficial1/">
-                                    <img src="{{ asset('public/assets/images/social/x.webp') }}" alt="img" class="w-75 me-3">
+                                    <img src="{{ asset('public/assets/images/social/In.svg') }}" alt="img" class="w-75 me-3">
                                 </a>
                             </li>
                         </ul>
@@ -94,7 +95,8 @@
                 <div class="col-md-5">
                     <div class="">
                         <h5 class="p-title d-flex">
-                            <img src="{{ asset('public/assets/images/home/qoute.webp') }}" alt="qoute" class="me-3 qoute-img">
+                            <img src="{{ asset('public/assets/images/home/qoute.webp') }}" alt="qoute"
+                                class="me-3 qoute-img">
                             The Food You Eat Should Be Perfect,
                             And This Is Our Responsibility
                         </h5>
@@ -126,7 +128,8 @@
                             affordable within your set budget.</p>
                         <br>
                         <div class="banner-home-button pb-3">
-                            <a href="#about"
+                            <a href="{{ url('about-us
+                            ') }}"
                                 class="btn btn-site-primary w-auto text-uppercase px-5 py-3 fs-5 booking-btn">About Us</a>
                         </div>
                     </div>
@@ -140,7 +143,7 @@
         </div>
     </div>
 
- <div class="rts-about-area rts-section-gapTopBotm" style="background-color: #F9F7F2;" id="services">
+    <div class="rts-about-area rts-section-gapTopBotm" style="background-color: #F9F7F2;" id="services">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-5">
@@ -314,15 +317,25 @@
                                                             <div class="col-md-12">
                                                                 <h5 class="text-site-danger">Week {{ $weekNum }}</h5>
                                                             </div>
-                                                           @php
-                                                                $dayOrder = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
-                                                                $sortedWeek = $week->sortBy(function ($menu) use ($dayOrder) {
-                                                                return array_search($menu->day, $dayOrder);
+                                                            @php
+                                                                $dayOrder = [
+                                                                    'Mon',
+                                                                    'Tue',
+                                                                    'Wed',
+                                                                    'Thu',
+                                                                    'Fri',
+                                                                    'Sat',
+                                                                    'Sun',
+                                                                ];
+                                                                $sortedWeek = $week->sortBy(function ($menu) use (
+                                                                    $dayOrder,
+                                                                ) {
+                                                                    return array_search($menu->day, $dayOrder);
                                                                 });
-                                                                @endphp
-                                                                
-                                                                @foreach ($sortedWeek as $menu)
-                                                        <div class="col-md-6 my-4">
+                                                            @endphp
+
+                                                            @foreach ($sortedWeek as $menu)
+                                                                <div class="col-md-6 my-4">
                                                                     <div class="d-flex">
                                                                         <div class="col-3 px-2">
                                                                             <img src="{{ asset($menu->image) }}"
@@ -439,9 +452,11 @@
     </div>
     <!-- end menu area start -->
 
-<div class="rts-about-area rts-section-gapTopBotm">
+    {{-- <div class="rts-about-area rts-section-gapTopBotm"> --}}
+    <div class="rts-about-area">
         <div class="container">
-            <div class="row">
+            {{-- hide our services --}}
+            {{-- <div class="row">
                 <div class="col-md-12 text-center">
                     <span class="w-foods-itilanio">Our Work</span>
                     <h3 class="p-title">Our Working Proccess</h3>
@@ -495,7 +510,7 @@
                     <p class="desc px-5 fs-5">Order the flavorful food and enjoy it with your team and boost the energy
                         of your workspace.</p>
                 </div>
-            </div>
+            </div> --}}
 
             <!-- Mobile Carousel View -->
             <div id="workingProcessCarousel" class="carousel slide d-md-none" data-bs-ride="carousel">
@@ -545,8 +560,8 @@
         </div>
     </div>
 
-      <!-- testimonial area start -->
-      <div class="rts-testimonial-area rts-section-gap">
+    <!-- testimonial area start -->
+    <div class="rts-testimonial-area rts-section-gap">
         <div class="container-fluid p-0">
             <div class="testimonial-area-inner">
                 <div class="banner-one-wrapper">
@@ -652,99 +667,101 @@
     </div>
     <!-- testimonial area end -->
 
- <div class="rts-about-area rts-section-gapTopBotm" style="background-color: #F9F7F2;" id="pricing">
+    <div class="rts-about-area rts-section-gapTopBotm" style="background-color: #F9F7F2;" id="pricing">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-12 text-center mb-4">
                     <span class="w-foods-itilanio">Our Packages</span>
                     <h4 class="p-title">Choose Your Menu – Choices for <br>Foodies Like You!</h4>
                 </div>
-                    <!-- Desktop Grid View -->
-                    <div class="row pt-5 text-center d-none d-md-flex justify-content-center">
-                        <div class="col-md-3">
-                            <div class="px-3 py-5 border border-danger text-center d-grid my-3"
-                                style="border-radius:15px; min-height: 25em;">
-                                <div>
-                                    <h5 class="fs-4 mb-3">Hostel Menu</h5>
-                                    <h4 class="text-danger fs-3 mb-0">30 Individuals</h4>
-                                    <p class="m-0 fw-light fs-6 border-bottom">Minimum</p>
+                <!-- Desktop Grid View -->
+                <div class="row pt-5 text-center d-none d-md-flex justify-content-center">
+                    <div class="col-md-3">
+                        <div class="px-3 py-5 border border-danger text-center d-grid my-3"
+                            style="border-radius:15px; min-height: 25em;">
+                            <div>
+                                <h5 class="fs-4 mb-3">Hostel Menu</h5>
+                                <h4 class="text-danger fs-3 mb-0">30 Individuals</h4>
+                                <p class="m-0 fw-light fs-6 border-bottom">Minimum</p>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-check me-4 text-danger"></i>7 days a week</li>
+                                <li><i class="fa fa-check me-4 text-danger"></i>Selected items only</li>
+                                <li><i class="fa fa-check me-4 text-danger"></i>Free Delivery</li>
+                            </ul>
+                            <a href="tel:+92 337 0777019"
+                                class="btn btn-site-primary w-auto text-uppercase px-5 py-3 fs-5 booking-btn">Book Now</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="px-3 py-5 border border-danger text-center d-grid my-3"
+                            style="border-radius:15px; min-height: 25em;">
+                            <div>
+                                <h5 class="fs-4 mb-3">Corporate Menu</h5>
+                                <h4 class="text-danger fs-3 mb-0">30 Individuals</h4>
+                                <p class="m-0 fw-light fs-6 border-bottom">Minimum</p>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-check me-4 text-danger"></i>5 days a week</li>
+                                <li><i class="fa fa-check me-4 text-danger"></i>8 Main Course Menu</li>
+                                <li><i class="fa fa-check me-4 text-danger"></i>All Menu Items</li>
+                                <li><i class="fa fa-check me-4 text-danger"></i>Free Delivery</li>
+                            </ul>
+                            <a href="tel:+92 337 0777019"
+                                class="btn btn-site-primary w-auto text-uppercase px-5 py-3 fs-5 booking-btn">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Carousel View -->
+                <div id="menuCarousel" class="carousel slide d-md-none" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Hostel Menu -->
+                        <div class="carousel-item active">
+                            <div class="text-center">
+                                <div class="px-3 py-5 border border-danger text-center d-grid my-3"
+                                    style="border-radius:15px; min-height: 25em;">
+                                    <div>
+                                        <h5 class="fs-4 mb-3">Hostel Menu</h5>
+                                        <h4 class="text-danger fs-3 mb-0">30 Individuals</h4>
+                                        <p class="m-0 fw-light fs-6 border-bottom">Minimum</p>
+                                    </div>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fa fa-check me-4 text-danger"></i>7 days a week</li>
+                                        <li><i class="fa fa-check me-4 text-danger"></i>Selected items only</li>
+                                        <li><i class="fa fa-check me-4 text-danger"></i>Free Delivery</li>
+                                    </ul>
+                                    <a href="tel:+92 337 0777019"
+                                        class="btn btn-site-primary w-auto text-uppercase px-5 py-3 fs-5 booking-btn">Book
+                                        Now</a>
                                 </div>
-                                <ul class="list-unstyled">
-                                    <li><i class="fa fa-check me-4 text-danger"></i>7 days a week</li>
-                                    <li><i class="fa fa-check me-4 text-danger"></i>Selected items only</li>
-                                    <li><i class="fa fa-check me-4 text-danger"></i>Free Delivery</li>
-                                </ul>
-                                <a href="tel:+92 337 0777019"
-                                    class="btn btn-site-primary w-auto text-uppercase px-5 py-3 fs-5 booking-btn">Book Now</a>
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            <div class="px-3 py-5 border border-danger text-center d-grid my-3"
-                                style="border-radius:15px; min-height: 25em;">
-                                <div>
-                                    <h5 class="fs-4 mb-3">Corporate Menu</h5>
-                                    <h4 class="text-danger fs-3 mb-0">30 Individuals</h4>
-                                    <p class="m-0 fw-light fs-6 border-bottom">Minimum</p>
+                        <!-- Corporate Menu -->
+                        <div class="carousel-item">
+                            <div class="text-center">
+                                <div class="px-3 py-5 border border-danger text-center d-grid my-3"
+                                    style="border-radius:15px; min-height: 25em;">
+                                    <div>
+                                        <h5 class="fs-4 mb-3">Corporate Menu</h5>
+                                        <h4 class="text-danger fs-3 mb-0">30 Individuals</h4>
+                                        <p class="m-0 fw-light fs-6 border-bottom">Minimum</p>
+                                    </div>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fa fa-check me-4 text-danger"></i>5 days a week</li>
+                                        <li><i class="fa fa-check me-4 text-danger"></i>8 Main Course Menu</li>
+                                        <li><i class="fa fa-check me-4 text-danger"></i>All Menu Items</li>
+                                        <li><i class="fa fa-check me-4 text-danger"></i>Free Delivery</li>
+                                    </ul>
+                                    <a href="tel:+92 337 0777019"
+                                        class="btn btn-site-primary w-auto text-uppercase px-5 py-3 fs-5 booking-btn">Book
+                                        Now</a>
                                 </div>
-                                <ul class="list-unstyled">
-                                    <li><i class="fa fa-check me-4 text-danger"></i>5 days a week</li>
-                                    <li><i class="fa fa-check me-4 text-danger"></i>8 Main Course Menu</li>
-                                    <li><i class="fa fa-check me-4 text-danger"></i>All Menu Items</li>
-                                    <li><i class="fa fa-check me-4 text-danger"></i>Free Delivery</li>
-                                </ul>
-                                <a href="tel:+92 337 0777019"
-                                    class="btn btn-site-primary w-auto text-uppercase px-5 py-3 fs-5 booking-btn">Book Now</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Mobile Carousel View -->
-                    <div id="menuCarousel" class="carousel slide d-md-none" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <!-- Hostel Menu -->
-                            <div class="carousel-item active">
-                                <div class="text-center">
-                                    <div class="px-3 py-5 border border-danger text-center d-grid my-3"
-                                        style="border-radius:15px; min-height: 25em;">
-                                        <div>
-                                            <h5 class="fs-4 mb-3">Hostel Menu</h5>
-                                            <h4 class="text-danger fs-3 mb-0">30 Individuals</h4>
-                                            <p class="m-0 fw-light fs-6 border-bottom">Minimum</p>
-                                        </div>
-                                        <ul class="list-unstyled">
-                                            <li><i class="fa fa-check me-4 text-danger"></i>7 days a week</li>
-                                            <li><i class="fa fa-check me-4 text-danger"></i>Selected items only</li>
-                                            <li><i class="fa fa-check me-4 text-danger"></i>Free Delivery</li>
-                                        </ul>
-                                        <a href="tel:+92 337 0777019"
-                                            class="btn btn-site-primary w-auto text-uppercase px-5 py-3 fs-5 booking-btn">Book Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Corporate Menu -->
-                            <div class="carousel-item">
-                                <div class="text-center">
-                                    <div class="px-3 py-5 border border-danger text-center d-grid my-3"
-                                        style="border-radius:15px; min-height: 25em;">
-                                        <div>
-                                            <h5 class="fs-4 mb-3">Corporate Menu</h5>
-                                            <h4 class="text-danger fs-3 mb-0">30 Individuals</h4>
-                                            <p class="m-0 fw-light fs-6 border-bottom">Minimum</p>
-                                        </div>
-                                        <ul class="list-unstyled">
-                                            <li><i class="fa fa-check me-4 text-danger"></i>5 days a week</li>
-                                            <li><i class="fa fa-check me-4 text-danger"></i>8 Main Course Menu</li>
-                                            <li><i class="fa fa-check me-4 text-danger"></i>All Menu Items</li>
-                                            <li><i class="fa fa-check me-4 text-danger"></i>Free Delivery</li>
-                                        </ul>
-                                        <a href="tel:+92 337 0777019"
-                                            class="btn btn-site-primary w-auto text-uppercase px-5 py-3 fs-5 booking-btn">Book Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+                </div>
 
             </div>
         </div>
@@ -765,41 +782,7 @@
         </div>
     </div>
     <!-- blog area start -->
-    <div class="rts-blog-area rts-blog-area-2 rts-section-gap d-lg-block d-none" id="blog">
-        <div class="container">
-            <div class="row text-center justify-content-center">
-                <div class="col-md-12 text-center mb-5">
-                    <span class="w-foods-itilanio">Our Blogs</span>
-                    <h4 class="p-title">Latest Blog & Articles</h4>
-                    <p class="desc">Learn more about our processes and stay informed about the latest <br> trends in the
-                        food industry.</p>
-                </div>
-                @forelse ($blogs->take(4) as $item)
-                    <div class="col-md-5 mb-5">
-                        <div class="blog-wrapper d-flex">
-                            <div class="image-part col-5">
-                                <img src="{{ asset($item->image) }}" alt="blog" class="h-100 w-100 obj-fit-contain">
-                            </div>
-                            <div class="content text-start p-3 col-7">
-                                <h5 class="fs-3 mb-md-4 m-0">{{ $item->title }}</h5>
-                                <p class="m-0 fs-5"><i
-                                        class="fa fa-clock pe-2"></i>{{ $item->created_at->format('d M Y') }}</p>
-                                <p class="py-md-3 m-0 fs-5"> {!! strip_tags(mb_substr($item->content, 0, 100)) . '...' !!}</p>
-                                <a href="{{ route('blogs.index', $item->slug) }}"
-                                    class="service-link text-danger text-uppercase fs-5 fw-bold">
-                                    Read more
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                @empty
-                @endforelse
-
-            </div>
-        </div>
-    </div>
+    @include('site.inc.blogs')
     <!-- blog area end -->
     <input type="hidden" value="{{ json_encode($menuArr) }}" id="menues">
     <input type="hidden" value="{{ json_encode($menuTypes) }}" id="menueTypes">

@@ -32926,3 +32926,157 @@ p.desc {
     margin: 10px 150px;
 }
 /*# sourceMappingURL=../maps/style.css.map */
+
+
+/* custom */
+/* teerms conditions */
+
+.terms-section {
+    padding: 60px 0;
+}
+
+.terms-section h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #071c34;
+}
+
+.terms-section p, .terms-section li {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.terms-section ul {
+    padding-left: 20px;
+}
+
+/* contact-us */
+.contact-info-item {
+    background: #c73938;
+    padding: 30px 0;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.contact-info-icon i {
+    font-size: 48px;
+    color: #fda40b;
+    margin-bottom: 15px;
+}
+
+.contact-info-text h2 {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.contact-info-text span {
+    color: #fff;
+    font-size: 16px;
+    display: block;
+}
+
+.contact-page-form h2 {
+    color: #071c34;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.contact-page-form input,
+.contact-page-form textarea {
+    background: #f9f9f9;
+    border: 1px solid #f9f9f9;
+    padding: 12px 16px;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contact-page-form input[type="submit"] {
+    background: #fda40b;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px 0;
+    text-transform: capitalize;
+    width: 150px;
+    border: none;
+}
+
+.contact-page-form input[type="submit"]:hover {
+    background: #c73938;
+    transition: 0.4s;
+}
+/* about-us */
+.about-section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #071c34;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.8;
+}
+
+.about-img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        padding: 40px 0;
+    }
+}
+/* faq */
+
+.accordion-item {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.accordion-button {
+    background-color: #f8f9fa !important font-weight: bold;
+    font-size: 16px;
+    padding: 20px
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #e9ecef;
+}
+
+.accordion-body {
+    padding: 1.5rem 1.25rem !important;
+}
+/* privay */
+.privacy-section {
+    padding: 40px 0;
+}
+
+.privacy-section h2 {
+    margin-top: 30px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.privacy-section ul {
+    padding-left: 20px;
+}
+
+.privacy-section ul li {
+    list-style-type: disc;
+}

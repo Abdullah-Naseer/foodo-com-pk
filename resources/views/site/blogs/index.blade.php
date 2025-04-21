@@ -111,8 +111,8 @@
                             <ul>
 
                                 <li class="cat-item @routeis('blogs.index')
-active
-@endrouteis "><a
+                                    active
+                                    @endrouteis "><a
                                         href="{{ route('blogs.index') }}">All</a></li>
                                 @forelse ($categories as $item)
                                     <li class="cat-item"><a

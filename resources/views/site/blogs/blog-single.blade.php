@@ -64,21 +64,11 @@
                         <div class="col-md-12">
                             <div class="blog-details-content pr-md-4">
                                 <div class="post-content-details">
-                                    @if ($blog->image != '')
-                                        @php
-                                            $style =
-                                                strpos($blog->image, ' ') !== false
-                                                    ? "background-image: url('" .
-                                                        asset($blog->image) .
-                                                        "')"
-                                                    : 'background-image: url(' .
-                                                        asset($blog->image) .
-                                                        ')';
-                                        @endphp
-                                        <div class="blog-detail-thumbnile mb35" style="{{ $style }}">
-                                        </div>
+                                    @if ($blog->image)
+                                        <img src="{{ asset($blog->image) }}" alt="{{ $blog->title }}"
+                                            class="img-fluid mb-4 rounded">
                                     @endif
-                                    
+
                                     <h1 class="detail-title">{{ $blog->title }}</h1>
 
                                     <div class="date-meta text-uppercase">

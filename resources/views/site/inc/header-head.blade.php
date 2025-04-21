@@ -40,6 +40,7 @@
         href="{{ asset('public/assets/css/plugins/owlcarousel/dist/assets/owl.theme.default.min.css') }}">
     <!-- sweet alert -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.15.3/sweetalert2.min.css" />
+    @stack("styles")
         <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-S10HP3W1E3"></script>
     <script>
