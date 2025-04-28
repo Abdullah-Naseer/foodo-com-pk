@@ -7,9 +7,10 @@
                 <div class="col-lg-6">
                     <div class="banner-left-image">
                         <span class="w-food-itilanio">Welcome To Foodo</span>
-                        <h1 class="p-title"><span class="text-danger">Homemade Khana</span> <span class="fw-normal">Right to
-                                Your Office</span></h1>
-                        <p class="desc fs-1">Make Your Teams Happy with Ghar ka Khana</p>
+                        <h1 class="p-title"><span class="fw-normal">Top Daily Lunch Delivery and</span> <span
+                                class="text-danger">Homemade Khana</span> <span class="fw-normal">Provider in Lahore</span>
+                        </h1>
+                        <p class="desc fs-1">We deliver to office workers and hostel boys in Gulberg, Lahore</p>
                         <div class="banner-home-button d-flex">
                             <a href="{{ url('contact-us') }}" class="order-btn-contact text-uppercase">Contact Us</a>
                             <a href="#menu-section" class="order-btn-see-menu text-uppercase">SEE Menu</a>
@@ -65,16 +66,19 @@
                         </div>
                         <div class="col-md-6 home-about-heading pb-3">
                             <div class="ps-4">
-                                <h3 class="p-title">A Well-Fed Team Is a Happy Team</h3>
-                                <p class="desc text-danger fs-5 fw-bold">Book Delicious & Fresh Lunch Goodness for Your
-                                    Corporate Teams</p>
-                                <h4 class="p-title border-danger border-start ps-4 border-5">Craving Ghar ka Khana at Lunch?
+                                <h3 class="p-title">Foodo is well-known for its lunchbox service in Gulberg, Lahore</h3>
+                                <p class="desc text-danger fs-5 fw-bold">First, have a free taste of the Meals and then make
+                                    your decisions</p>
+                                <h4 class="p-title border-danger border-start ps-4 border-5">Craving for home-made food in
+                                    Lahore?
                                 </h4>
-                                <p>Register your group for an amazing lunchtime</p>
+                                <p class="">Register yourself with Lahore's most demanding homemade lunch service
+                                    providers</p>
+                                <p class="m-0">What will you get?</p>
                                 <ul class="list-style-auto">
-                                    <li>Select your chosen menu</li>
-                                    <li>Place your order with the team *Minimum order restriction apply</li>
-                                    <li>Enjoy your food at the designated time</li>
+                                    <li>A clean and hygienic homemade lunch box</li>
+                                    <li>Affordable and Delicious Meals </li>
+                                    <li>Fast Food Delivered to your Office or Hostel </li>
                                 </ul>
                                 <br>
                                 <div class="banner-home-button text-center">
@@ -98,12 +102,16 @@
                         <h5 class="p-title d-flex">
                             <img src="{{ asset('public/assets/images/home/qoute.webp') }}" alt="qoute"
                                 class="me-3 qoute-img">
-                            The Food You Eat Should Be Perfect,
-                            And This Is Our Responsibility
+                            The food You Eat Should be Perfect
+                            And This is Our Responsibility
                         </h5>
-                        <p class="desc mb-4">At Foodo, we are dedicated to providing the best food by sourcing top-quality
-                            ingredients from our selected vendors. It helps to ensure freshness with an irresistible taste
-                            that savors your hunger.</p>
+                        <p class="desc mb-4">At Foodo, 800 people have registered for daily lunch delivery and are happy due
+                            to
+                            Top Quality, Clean, and Affordable meals with fresh ingredients used in them. This helps us to
+                            ensure
+                            We are providing a hygiene lunchbox and a homemade food service with the fastest delivery in
+                            Gulberg Lahore
+                            .</p>
                         <div class="d-block my-3">
                             <div class="d-flex justify-content-between">
                                 <p class="mb-2 fw-bold text-black">Quality Food</p>
@@ -124,14 +132,10 @@
                                     aria-valuemin="0" aria-valuemax="90"></div>
                             </div>
                         </div>
-                        <p class="desc mb-3">We consider it our responsibility to provide you with a nutritious meal and the
-                            comfort of “Ghar ka Khana”. By ensuring all the basic requirements, we make the food easily
-                            affordable within your set budget.</p>
+                        <p class="desc mb-3">We consider it our responsibility to provide you with a nutritious meal and the comfort of “Ghar ka Khana”. By ensuring all the basic requirements, we make the food easily affordable within your set budget.</p>
                         <br>
                         <div class="banner-home-button pb-3">
-                            <a href="{{ url('about-us
-                                                                                    ') }}"
-                                class="btn btn-site-primary w-auto text-uppercase px-5 py-3 fs-5 booking-btn">About Us</a>
+                            <a href="{{ url('about-us')}}" class="btn btn-site-primary w-auto text-uppercase px-5 py-3 fs-5 booking-btn">Know more about us </a>
                         </div>
                     </div>
                 </div>
@@ -143,6 +147,113 @@
             </div>
         </div>
     </div>
+
+      <!-- testimonial area start -->
+      <div class="rts-testimonial-area rts-section-gap">
+        <div class="container-fluid p-0">
+            <div class="testimonial-area-inner">
+                <div class="banner-one-wrapper">
+                    <h4 class="mb-5" data-sal="slide-up" data-sal-delay="170" data-sal-duration="800">
+                        Our Taste Speaks Through <br> <span class="text-danger">Hundreds of Clients</span>
+                    </h4>
+                </div>
+
+                <div class="swiper-testimonial-main-wrapper">
+                    <div class="swiper swiper-testimonials-1" data-sal="slide-up" data-sal-delay="1500"
+                        data-sal-duration="800">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="testimonial-wrapper">
+                                    <div class="content">
+                                        <span class="w-foods-itilanio">Testimonial</span>
+                                        <h4 class="text-danger">What They Say</h4>
+                                        <img src="{{ asset('public/assets/images/team/01.webp') }}"
+                                            class="rounded-circle border border-2 border-danger testimonial-img m-auto"
+                                            alt="placeholder img">
+                                        <div class="rating my-3">
+                                            <i class="fa-solid fa-star text-danger"></i>
+                                            <i class="fa-solid fa-star text-danger"></i>
+                                            <i class="fa-solid fa-star text-danger"></i>
+                                            <i class="fa-solid fa-star text-danger"></i>
+                                            <i class="fa-solid fa-star text-danger"></i>
+                                        </div>
+                                        <h3>
+                                            <em>Foodo's lunch service is a game-changer! Fresh, flavorful, and perfectly
+                                                portioned meals delivered on time every day. The variety in their menu keeps
+                                                me excited for lunch. Highly recommended for anyone seeking quality and
+                                                convenience!</em>
+                                        </h3>
+                                    </div>
+                                    <div class="author text-center m-0 p-0">
+                                        <h5 class="title fs-4">Ayesha Khan:</h5>
+                                        <p class="sub-title fs-6 fw-light">Corporate Employee</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="testimonial-wrapper">
+                                    <div class="content">
+                                        <span class="w-foods-itilanio">Testimonial</span>
+                                        <h4 class="text-danger">What They Say</h4>
+                                        <img src="{{ asset('public/assets/images/team/01.webp') }}"
+                                            class="rounded-circle border border-2 border-danger testimonial-img m-auto"
+                                            alt="placeholder img">
+                                        <div class="rating my-3">
+                                            <i class="fa-solid fa-star text-danger"></i>
+                                            <i class="fa-solid fa-star text-danger"></i>
+                                            <i class="fa-solid fa-star text-danger"></i>
+                                            <i class="fa-solid fa-star text-danger"></i>
+                                            <i class="fa-solid fa-star text-danger"></i>
+                                        </div>
+                                        <h3>
+                                            <em>Foodo takes the hassle out of lunch planning. Their delicious and healthy
+                                                meals have become the highlight of my workday. With Foodo, I can focus on my
+                                                work without worrying about what to eat. Truly satisfying and worth every
+                                                penny!</em>
+                                        </h3>
+                                    </div>
+                                    <div class="author text-center m-0 p-0">
+                                        <h5 class="title fs-4">Ali Raza:</h5>
+                                        <p class="sub-title fs-6 fw-light">Corporate Employee</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="testimonial-wrapper">
+                                    <div class="content">
+                                        <span class="w-foods-itilanio">Testimonial</span>
+                                        <h4 class="text-danger">What They Say</h4>
+                                        <img src="{{ asset('public/assets/images/team/01.webp') }}"
+                                            class="rounded-circle border border-2 border-danger testimonial-img m-auto"
+                                            alt="placeholder img">
+                                        <div class="rating my-3">
+                                            <i class="fa-solid fa-star text-danger"></i>
+                                            <i class="fa-solid fa-star text-danger"></i>
+                                            <i class="fa-solid fa-star text-danger"></i>
+                                            <i class="fa-solid fa-star text-danger"></i>
+                                            <i class="fa-solid fa-star text-danger"></i>
+                                        </div>
+                                        <h3>
+                                            <em>I love Foodo's variety and quality. The taste reminds me of homemade food,
+                                                and the convenience is unmatched. Their punctual delivery and attention to
+                                                detail make them my go-to lunch service every day!</em>
+                                        </h3>
+                                    </div>
+                                    <div class="author text-center m-0 p-0">
+                                        <h5 class="title fs-4">Sana Ahmed:</h5>
+                                        <p class="sub-title fs-6 fw-light">Corporate Employee</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- testimonial area end -->
 
     {{-- <div class="rts-about-area rts-section-gapTopBotm" style="background-color: #F9F7F2;" id="services">
         <div class="container">
@@ -452,8 +563,8 @@
         </div>
     </div>
     <!-- end menu area start -->
-
-    <div class="rts-about-area rts-section-gapTopBotm">
+{{-- /rts-section-gapTopBotm --}}
+    <div class="rts-about-area">
         <div class="container">
             {{-- hide our services --}}
             <div class="row">
@@ -559,113 +670,6 @@
 
         </div>
     </div>
-
-    <!-- testimonial area start -->
-    <div class="rts-testimonial-area rts-section-gap">
-        <div class="container-fluid p-0">
-            <div class="testimonial-area-inner">
-                <div class="banner-one-wrapper">
-                    <h4 class="mb-5" data-sal="slide-up" data-sal-delay="170" data-sal-duration="800">
-                        Our Taste Speaks Through <br> <span class="text-danger">Hundreds of Clients</span>
-                    </h4>
-                </div>
-
-                <div class="swiper-testimonial-main-wrapper">
-                    <div class="swiper swiper-testimonials-1" data-sal="slide-up" data-sal-delay="1500"
-                        data-sal-duration="800">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="testimonial-wrapper">
-                                    <div class="content">
-                                        <span class="w-foods-itilanio">Testimonial</span>
-                                        <h4 class="text-danger">What They Say</h4>
-                                        <img src="{{ asset('public/assets/images/team/01.webp') }}"
-                                            class="rounded-circle border border-2 border-danger testimonial-img m-auto"
-                                            alt="placeholder img">
-                                        <div class="rating my-3">
-                                            <i class="fa-solid fa-star text-danger"></i>
-                                            <i class="fa-solid fa-star text-danger"></i>
-                                            <i class="fa-solid fa-star text-danger"></i>
-                                            <i class="fa-solid fa-star text-danger"></i>
-                                            <i class="fa-solid fa-star text-danger"></i>
-                                        </div>
-                                        <h3>
-                                            <em>Foodo's lunch service is a game-changer! Fresh, flavorful, and perfectly
-                                                portioned meals delivered on time every day. The variety in their menu keeps
-                                                me excited for lunch. Highly recommended for anyone seeking quality and
-                                                convenience!</em>
-                                        </h3>
-                                    </div>
-                                    <div class="author text-center m-0 p-0">
-                                        <h5 class="title fs-4">Ayesha Khan:</h5>
-                                        <p class="sub-title fs-6 fw-light">Corporate Employee</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="testimonial-wrapper">
-                                    <div class="content">
-                                        <span class="w-foods-itilanio">Testimonial</span>
-                                        <h4 class="text-danger">What They Say</h4>
-                                        <img src="{{ asset('public/assets/images/team/01.webp') }}"
-                                            class="rounded-circle border border-2 border-danger testimonial-img m-auto"
-                                            alt="placeholder img">
-                                        <div class="rating my-3">
-                                            <i class="fa-solid fa-star text-danger"></i>
-                                            <i class="fa-solid fa-star text-danger"></i>
-                                            <i class="fa-solid fa-star text-danger"></i>
-                                            <i class="fa-solid fa-star text-danger"></i>
-                                            <i class="fa-solid fa-star text-danger"></i>
-                                        </div>
-                                        <h3>
-                                            <em>Foodo takes the hassle out of lunch planning. Their delicious and healthy
-                                                meals have become the highlight of my workday. With Foodo, I can focus on my
-                                                work without worrying about what to eat. Truly satisfying and worth every
-                                                penny!</em>
-                                        </h3>
-                                    </div>
-                                    <div class="author text-center m-0 p-0">
-                                        <h5 class="title fs-4">Ali Raza:</h5>
-                                        <p class="sub-title fs-6 fw-light">Corporate Employee</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="testimonial-wrapper">
-                                    <div class="content">
-                                        <span class="w-foods-itilanio">Testimonial</span>
-                                        <h4 class="text-danger">What They Say</h4>
-                                        <img src="{{ asset('public/assets/images/team/01.webp') }}"
-                                            class="rounded-circle border border-2 border-danger testimonial-img m-auto"
-                                            alt="placeholder img">
-                                        <div class="rating my-3">
-                                            <i class="fa-solid fa-star text-danger"></i>
-                                            <i class="fa-solid fa-star text-danger"></i>
-                                            <i class="fa-solid fa-star text-danger"></i>
-                                            <i class="fa-solid fa-star text-danger"></i>
-                                            <i class="fa-solid fa-star text-danger"></i>
-                                        </div>
-                                        <h3>
-                                            <em>I love Foodo's variety and quality. The taste reminds me of homemade food,
-                                                and the convenience is unmatched. Their punctual delivery and attention to
-                                                detail make them my go-to lunch service every day!</em>
-                                        </h3>
-                                    </div>
-                                    <div class="author text-center m-0 p-0">
-                                        <h5 class="title fs-4">Sana Ahmed:</h5>
-                                        <p class="sub-title fs-6 fw-light">Corporate Employee</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- testimonial area end -->
 
     <div class="rts-about-area rts-section-gapTopBotm" style="background-color: #F9F7F2;" id="pricing">
         <div class="container">
