@@ -74,7 +74,7 @@
                         </div>
                         <div class="contact-info-text">
                             <h2>Phone</h2>
-                            <span> <a href="tel:tel:+92 337 0777019" class="text-white">tel:+92 337 0777019 </a></span>
+                            <span> <a href="tel:+92 337 0777019" class="text-white">tel:+92 337 0777019 </a></span>
                         </div>
                     </div>
                 </div>

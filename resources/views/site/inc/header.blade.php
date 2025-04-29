@@ -62,12 +62,12 @@
                 <nav class="nav-main mainmenu-nav mt--30">
                     <ul class="mainmenu" id="mobile-menu-active">
                         <li><a class="nav-link" href="{{ url('/') }}">Home</a></li>
-                        <li><a class="nav-link" href="#about">About Us</a></li>
-                        <li><a class="nav-link" href="#services">Services</a></li>
-                        <li><a class="nav-link" href="#menu-section">Menu</a></li>
-                        <li><a class="nav-link" href="#pricing">Pricing</a></li>
-                        <li><a class="nav-link" href="#blog">Blog</a></li>
-                        <li><a class="nav-link" href="tel:+92 337 0777019">Contact</a></li>
+                        <li><a class="nav-link" href="{{ url('/') }}#menu-section">Menu</a></li>
+                        <li><a class="nav-link" href="{{ url('blogs') }}">Blog</a></li>
+                        <li><a class="nav-link" href="{{ url('about-us') }}">About Us</a></li>
+                        {{-- <li><a class="nav-link" href="#services">Services</a></li> --}}
+                        {{-- <li><a class="nav-link" href="#pricing">Pricing</a></li> --}}
+                        <li><a class="nav-link" href="{{ url('contact-us') }}">Contact</a></li>
                     </ul>
                 </nav>
             </div>
