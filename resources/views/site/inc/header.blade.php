@@ -29,8 +29,13 @@
                         <!-- header right start -->
                         <div class="rts-header-right">
                             <div class="query-list rounded-0 px-5">
-                                <a href="tel:+92 337 0777019" class="m-0"><span class="text-heading text-uppercase">Get Started</span></a>
-                            </div>
+                                <a href="tel:+92 337 0777019" class="m-0 phone-link">
+                                  <i class="fas fa-phone fs-1 ring-phone pe-2"></i>
+                                  <span class="text-heading text-uppercase">+92 337 0777019</span>
+                                </a>
+                              </div>
+
+
                             <div class="menu-area d-md-none d-block" id="menu-btn">
                                 <a href="#" class="nav-menu-link menu-button">
                                     <span class="dot1"></span>

@@ -33080,3 +33080,22 @@ p.desc {
 .privacy-section ul li {
     list-style-type: disc;
 }
+
+
+@keyframes phone-ring {
+    0% { transform: rotate(0); }
+    10% { transform: rotate(15deg); }
+    20% { transform: rotate(-10deg); }
+    30% { transform: rotate(10deg); }
+    40% { transform: rotate(-8deg); }
+    50% { transform: rotate(6deg); }
+    60% { transform: rotate(-4deg); }
+    70% { transform: rotate(2deg); }
+    80% { transform: rotate(-1deg); }
+    90% { transform: rotate(0.5deg); }
+    100% { transform: rotate(0); }
+  }
+
+  .phone-link:hover .ring-phone {
+    animation: phone-ring 1s ease-in-out;
+  }
