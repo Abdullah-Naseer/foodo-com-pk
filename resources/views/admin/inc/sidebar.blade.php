@@ -97,7 +97,7 @@
                     </a>
                 </li>
             @endcan
-            
+
               @can('Categories')
                 <li class="sidebar-item {{ Route::is('admin.categories.index') ? 'active' : '' }}">
                     <a class="sidebar-link" href="{{ route('admin.categories.index') }}">
@@ -115,7 +115,7 @@
                 </a>
             </li>
         @endcan
-        
+
          @can('UrlRedirect')
                 <li class="sidebar-item {{ Route::is('admin.url-redirects.index') ? 'active' : '' }}">
                     <a class="sidebar-link" href="{{ route('admin.url-redirects.index') }}">
@@ -124,7 +124,7 @@
                     </a>
                 </li>
             @endcan
-            
+
             @can('sitemap')
             <li class="sidebar-item {{ Route::is('admin.sitemap') ? 'active' : '' }}">
                 <a class="sidebar-link" href="{{ route('admin.sitemap') }}">

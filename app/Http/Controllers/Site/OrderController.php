@@ -11,7 +11,6 @@ use App\Models\MealPlan;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
-use App\Models\User;
 
 class OrderController extends Controller
 {

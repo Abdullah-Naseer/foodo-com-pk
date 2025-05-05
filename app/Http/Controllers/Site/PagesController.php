@@ -7,7 +7,9 @@ use App\Http\Controllers\Controller;
 use App\Mail\contactForm;
 use App\Models\Blog;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
+use RalphJSmit\Laravel\SEO\Support\SEOData;
 
 
 class PagesController extends Controller
@@ -33,10 +35,14 @@ class PagesController extends Controller
             $blogs = Blog::latest()->take(2)->get();
         }
 
-        return view($viewPath, compact('page', 'blogs'));
+        return view($viewPath, [
+            'SEOData' => new SEOData(
+                title: $page->title,
+                description: $page->meta_description,
+            ),
+            'blogs' => $blogs
+        ]);
     }
-
-
 
     public function contactForm(Request $request)
     {
@@ -47,8 +53,13 @@ class PagesController extends Controller
             'message' => 'required|string',
         ]);
         $data = $validated;
-        Mail::to('info@foodo.com.pk')
-            ->send(new contactForm($data));
-        return back()->with('success', 'Your message has been sent!');
+        try {
+            Mail::to('info@foodo.com.pk')
+                ->send(new contactForm($data));
+            return back()->with('success', 'Your message has been sent!');
+        } catch (\Exception $e) {
+            Log::error('Email failed to send: ' . $e->getMessage());
+            return back()->with('success', 'Your message has been sent!');
+        }
     }
 }

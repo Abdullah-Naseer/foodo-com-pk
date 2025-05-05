@@ -10,10 +10,11 @@ use App\Models\MealPlan;
 use App\Models\MenuType;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
 
 class DashboardController extends Controller
 {
-        public function index()
+    public function index()
     {
         $recentOrders = MealPlan::with('menuType')->latest()->take(4)->get();
         $totalOrders = MealPlan::count();
@@ -50,30 +51,28 @@ class DashboardController extends Controller
 
         return view('admin.history', compact('history', 'users'));
     }
-    
-        public function sitemap(Request $request)
+
+    public function sitemap(Request $request)
     {
-        return view("admin.sitemap.upload");
+        return view("admin.sitemap.generate");
     }
 
-    public function uploadSitemap(Request $request)
+    public function generateSitemap(Request $request)
     {
-        $request->validate([
-            'sitemap_file' => 'required|file|mimes:xml|max:2048',
-        ]);
-
-        $file = $request->file('sitemap_file');
-        $upload = $file->move(base_path(), 'sitemap.xml');
-
-        if ($upload) {
+        try {
+            Artisan::call('sitemap:generate');
             LogActivity::addToLog('sitemap', 'insert', "", null);
+
+            return response()->json([
+                'success' => true,
+                'message' => 'Sitemap generated successfully!',
+            ]);
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Failed to generate sitemap.',
+                'error' => $e->getMessage(),
+            ], 500);
         }
-
-        return response()->json([
-            'success' => true,
-            'message' => 'Sitemap uploaded successfully!',
-            'redirect' => route('admin.sitemap')
-        ]);
     }
-
 }

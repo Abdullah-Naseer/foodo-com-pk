@@ -6,7 +6,7 @@
     <!-- favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('public/assets/images/favicon.png') }}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    @if (isset($page->meta_title) || isset($page->title))
+    {{-- @if (isset($page->meta_title) || isset($page->title))
         <title>{{ $page->meta_title ?? $page->title }} |
             {{ $page->title ?? 'Foodo' }}</title>
     @else
@@ -14,7 +14,8 @@
     @endif
 
     <meta name="description" content="@yield('seo_description', isset($page->meta_description) ? $page->meta_description : '')">
-    <meta name="keywords" content="@yield('meta_keywords', isset($page->meta_keywords) ? $page->meta_keywords : '')">
+    <meta name="keywords" content="@yield('meta_keywords', isset($page->meta_keywords) ? $page->meta_keywords : '')"> --}}
+    {!! seo($SEOData) !!}
 
     <link rel="stylesheet" href="{{ asset('public/assets/css/plugins/fontawesome-5.css') }}">
     <link rel="stylesheet" href="{{ asset('public/assets/css/plugins/swiper.css') }}">
@@ -34,14 +35,13 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet"
-        href="{{ asset('public/assets/css/plugins/owlcarousel/dist/assets/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/assets/css/plugins/owlcarousel/dist/assets/owl.carousel.min.css') }}">
     <link rel="stylesheet"
         href="{{ asset('public/assets/css/plugins/owlcarousel/dist/assets/owl.theme.default.min.css') }}">
     <!-- sweet alert -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.15.3/sweetalert2.min.css" />
-    @stack("styles")
-        <!-- Google tag (gtag.js) -->
+    @stack('styles')
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-S10HP3W1E3"></script>
     <script>
         window.dataLayer = window.dataLayer || [];

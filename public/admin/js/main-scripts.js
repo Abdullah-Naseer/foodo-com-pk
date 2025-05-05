@@ -1,31 +1,43 @@
 $(".standart-form").on("submit", async function (e) {
     e.preventDefault();
+
+    let $form = $(this);
+    let $submitBtn = $form.find('button[type="submit"]');
+    let originalText = $submitBtn.html();
+    $submitBtn.data("original-text", originalText);
+
     try {
-        let $form = $(this);
+        $submitBtn
+            .prop("disabled", true)
+            .html(`<i class="fas fa-spinner fa-spin"></i> Processing...`);
 
         let response = await $.ajax({
             type: $form.attr("method"),
             url: $form.attr("action"),
             data: $form.serialize(),
             dataType: "json",
-            beforeSend: function (xhr) {
+            beforeSend: function () {
                 $(".invalid-feedback").hide();
+                $(".invalid").removeClass("invalid");
             },
             error: function (jqXHR) {
-                console.log(jqXHR)
-                let response =
-                    jqXHR.responseJSON || JSON.parse(jqXHR.responseJSON);
-                    console.log("cosole,",response.errors);
-                $.each(response.errors, function (field, value) {
-                    $('.invalid-feedback[data-field="' + field + '"]', $form)
-                        .text(value[0])
-                        .show();
-                    $('[name="' + field + '"]', $form).addClass("invalid");
-                });
+                let response = jqXHR.responseJSON;
+                if (response?.errors) {
+                    $.each(response.errors, function (field, value) {
+                        $(
+                            '.invalid-feedback[data-field="' + field + '"]',
+                            $form
+                        )
+                            .text(value[0])
+                            .show();
+                        $('[name="' + field + '"]', $form).addClass("invalid");
+                    });
+                }
             },
         });
+
         if (response.success) {
-            swal.fire("Success!", response.message, "success").then(() => {
+            Swal.fire("Success!", response.message, "success").then(() => {
                 if (response.reload) {
                     window.location.reload();
                 }
@@ -34,14 +46,15 @@ $(".standart-form").on("submit", async function (e) {
                 }
             });
         } else {
-            Swal.fire({
-                title: "Error!",
-                text: response.message,
-                icon: "error",
-            });
+            Swal.fire("Error!", response.message, "error");
         }
-    } catch (e) {
-        console.error(e);
+    } catch (error) {
+        console.error(error);
+        Swal.fire("Error!", "Something went wrong.", "error");
+    } finally {
+        $submitBtn
+            .prop("disabled", false)
+            .html($submitBtn.data("original-text"));
     }
 });
 
@@ -75,8 +88,12 @@ $(document).on("click", ".removeItem", async function (e) {
                 }
             },
             error: function () {
-                swal.fire("Error!", "There was an issue deleting this item.", "error");
-            }
+                swal.fire(
+                    "Error!",
+                    "There was an issue deleting this item.",
+                    "error"
+                );
+            },
         });
     }
 });
@@ -84,4 +101,3 @@ $(document).on("click", ".removeItem", async function (e) {
 $(document).ready(function () {
     $(".select2").select2();
 });
-

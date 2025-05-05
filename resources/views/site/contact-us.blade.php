@@ -83,9 +83,11 @@
             <div class="contact-page-form mt-5">
                 <h2>Get in Touch</h2>
 
-                @if (session('success'))
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        <strong>Thank you!</strong> {{ session('success') }}
+                @if (session('success') || session('error'))
+                    <div class="alert alert-{{ session('success') ? 'success' : 'danger' }} alert-dismissible fade show"
+                        role="alert">
+                        <strong>{{ session('success') ? 'Thank you!' : 'Oops!' }}</strong>
+                        {{ session('success') ?? session('error') }}
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 @endif
