@@ -37,7 +37,7 @@
                                         <li><a href="{{ url('about-us') }}"><i class="fa-solid fa-angle-right"></i>
                                                 About Us</a></li>
                                         {{-- <li><a href="#services"><i class="fa-solid fa-angle-right"></i> Services</a></li> --}}
-                                        <li><a href="#menu-section"><i class="fa-solid fa-angle-right"></i>Menu</a></li>
+                                        <li><a href="{{ url('/') }}#menu-section"><i class="fa-solid fa-angle-right"></i>Menu</a></li>
                                         {{-- <li><a href="#pricing"><i class="fa-solid fa-angle-right"></i> Pricing</a></li> --}}
                                         <li><a href="{{ url('contact-us') }}"><i class="fa-solid fa-angle-right"></i>
                                                 Contact Us</a></li>

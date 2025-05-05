@@ -90,7 +90,13 @@ class BlogsController extends Controller
             $blogs = $category->blogs()->orderBy('id', 'desc')->paginate(6);
             $page = $this->getPage($request->url());
 
-            return view('site.blogs.index', compact('category', 'blogs', 'categories', 'page'));
+            return view('site.blogs.index', compact('category', 'blogs', 'categories', 'page')
+            + [
+                'SEOData' => new SEOData(
+                    title: $page->title,
+                    description: $page->meta_description,
+                )
+            ]);
         }
         return abort(404);
     }

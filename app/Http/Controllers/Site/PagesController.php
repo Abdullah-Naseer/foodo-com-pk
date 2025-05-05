@@ -11,7 +11,6 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use RalphJSmit\Laravel\SEO\Support\SEOData;
 
-
 class PagesController extends Controller
 {
     public function show($slug = '/')
@@ -37,7 +36,7 @@ class PagesController extends Controller
 
         return view($viewPath, [
             'SEOData' => new SEOData(
-                title: $page->title,
+                title: $page->meta_title ?? $page->title,
                 description: $page->meta_description,
             ),
             'blogs' => $blogs
