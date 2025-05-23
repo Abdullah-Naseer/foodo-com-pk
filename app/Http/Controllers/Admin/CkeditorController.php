@@ -8,18 +8,34 @@ use Illuminate\Http\Request;
 class CkeditorController extends Controller
 {
 
-
     public function upload(Request $request)
     {
-        $file = null;
-        if ($request->upload) {
-            $file = $request->upload;
-            $path = "ckeditor/media";
+        $request->validate([
+            'upload' => 'required|file|mimes:jpg,jpeg,png,gif,webp|max:10240',
+        ]);
 
-            $fileName = time() . '.' . $file->extension();
+        if ($request->hasFile('upload')) {
+            $file = $request->file('upload');
+            $path = 'ckeditor/media';
+
+            $fileName = time() . '.' . $file->getClientOriginalExtension();
+
             $file->move(public_path($path), $fileName);
-            $file_path = asset("public/".$path . '/' . $fileName);
+
+            $fileUrl = asset("public/".$path . '/' . $fileName);
+
+            return response()->json([
+                'uploaded' => 1,
+                'fileName' => $fileName,
+                'url' => $fileUrl,
+            ]);
         }
-        return response()->json(['url' => $file_path]);
+
+        return response()->json([
+            'uploaded' => 0,
+            'error' => [
+                'message' => 'No file uploaded',
+            ],
+        ]);
     }
 }

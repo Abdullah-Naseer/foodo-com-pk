@@ -58,7 +58,9 @@ class OrderController extends Controller
             if ($customer->email) {
                 try {
                     Log::info('Attempting to send email to: ' . $customer->email);
-                    // Mail::to("devtms@ipscloud.co")->send(new OrderCreated($customer, $mealPlan));
+
+                    Mail::to("info@foodo.com.pk")->send(new OrderCreated($customer, $mealPlan));
+
                     Mail::to($customer->email)->send(new OrderCreated($customer, $mealPlan));
                     Log::info('Emails successfully sent');
                 } catch (\Exception $e) {

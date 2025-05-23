@@ -24,7 +24,6 @@ class UpdateBlogsRequest extends FormRequest
         return [
             'title' => 'required',
             'category_id' => 'required',
-            'slug' => 'required',
             'content' => 'required',
             'image' => 'nullable|image|mimes:webp|max:2048',
         ];

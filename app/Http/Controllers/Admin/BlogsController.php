@@ -46,7 +46,7 @@ class BlogsController extends Controller
     {
         $blog = new Blog();
         $blog->title = $request->title;
-        $blog->slug = Str::slug($request->slug) ?: Str::slug($request->title);
+        $blog->slug = Str::slug($request->title);
         $blog->category_id = $request->category_id;
         $blog->content = $request->content;
 
@@ -107,7 +107,7 @@ class BlogsController extends Controller
 
 
             $blog->title = $request->title;
-            $blog->slug = Str::slug($request->slug) ?: Str::slug($request->title);
+            $blog->slug = Str::slug($request->title);
             $blog->category_id = $request->category_id;
             $blog->content = $request->content;
 

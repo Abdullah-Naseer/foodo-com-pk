@@ -49,9 +49,8 @@
                         </div>
                         <div class="contact-info-text">
                             <h2>Address</h2>
-                            <span>Office 1506, Al Hafeez Executive, 30 Firdous Mkt Rd, Lahore,
-                                Block C3 Gulberg III,
-                                Punjab 54760, Pakistan
+                            <span> <a href="https://g.co/kgs/jPXq4ns" class="text-white"> Nathain Pind, H no 1 St, 6 Firdous
+                                    Mkt Rd, Gulberg III, Lahore, 54660, Pakistan</a></span>
                         </div>
                     </div>
                 </div>

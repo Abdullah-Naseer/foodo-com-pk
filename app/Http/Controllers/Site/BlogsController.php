@@ -19,16 +19,16 @@ class BlogsController extends Controller
         $categories = Category::has('blogs')->take(10)->get();
 
         if ($request->slug != "") {
-            $ex = explode('-', $request->slug);
-            $c = count($ex);
-            $rm = $c - 1;
-            unset($ex[$rm]);
-            $new = join('-', $ex);
+            // $ex = explode('-', $request->slug);
+            // $c = count($ex);
+            // $rm = $c - 1;
+            // unset($ex[$rm]);
+            // $new = join('-', $ex);
 
-            $checkId =  last(explode('-', $request->slug));
-            if (is_numeric($checkId)) {
-                return redirect()->route('site.blogs.index', ['slug' => $new]);
-            }
+            // $checkId =  last(explode('-', $request->slug));
+            // if (is_numeric($checkId)) {
+            //     return redirect()->route('site.blogs.index', ['slug' => $new]);
+            // }
             $slug =   Blog::where('slug', '=', $request->slug)->FirstOrFail();
             $blog_id = $slug->id;
 
@@ -41,7 +41,10 @@ class BlogsController extends Controller
                 'site.blogs.blog-single',
                 compact('blog', 'popular_tags', 'categories', 'related_news', 'latest_news')
                     + [
-                        'SEOData' => new SEOData()
+                        'SEOData' => new SEOData(
+                        title: $blog->title,
+                        description: $blog->meta_description,
+                    )
                     ]
             );
         }

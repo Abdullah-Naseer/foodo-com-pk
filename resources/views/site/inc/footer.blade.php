@@ -17,8 +17,8 @@
                                 <ul>
                                     <li class="fs-4">
                                         <i class="fa-solid fa-location-dot"></i>
-                                        Office 1506, Al Hafeez Executive, 30 Firdous Mkt Rd, Block C3 Gulberg III,
-                                        Lahore, Punjab 54760, Pakistan
+                                        <a href="https://g.co/kgs/UeLuMbq" class="ms-2">Nathain Pind, H no 1 St, 6 Firdous Mkt Rd, Gulberg III,
+                                            Lahore, 54660, Pakistan</a>
                                     </li>
                                     <li class="fs-4"><a href="mailto:info@foodo.com.pk"><i
                                                 class="fa-solid fa-envelope"></i>info@foodo.com.pk</a></li>
@@ -37,7 +37,8 @@
                                         <li><a href="{{ url('about-us') }}"><i class="fa-solid fa-angle-right"></i>
                                                 About Us</a></li>
                                         {{-- <li><a href="#services"><i class="fa-solid fa-angle-right"></i> Services</a></li> --}}
-                                        <li><a href="{{ url('/') }}#menu-section"><i class="fa-solid fa-angle-right"></i>Menu</a></li>
+                                        <li><a href="{{ url('/') }}#menu-section"><i
+                                                    class="fa-solid fa-angle-right"></i>Menu</a></li>
                                         {{-- <li><a href="#pricing"><i class="fa-solid fa-angle-right"></i> Pricing</a></li> --}}
                                         <li><a href="{{ url('contact-us') }}"><i class="fa-solid fa-angle-right"></i>
                                                 Contact Us</a></li>
