@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /admin/login/
+Allow: / 
+User-agent: Googlebot-Image 
+Allow: /wp-content/uploads/ 
+User-agent: Adsbot-Google 
+Allow: / 
+User-agent: Googlebot-Mobile 
+Allow: / 
+Sitemap: https://www.foodo.com.pk/sitemap.xml
