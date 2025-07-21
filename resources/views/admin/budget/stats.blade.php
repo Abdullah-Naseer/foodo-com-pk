@@ -94,7 +94,7 @@
                         <div class="card-header">
                             <h5 class="card-title">Profit vs Expense - Year {{$currentYear}}</h5>
                             <div>
-                                <span class="badge bg-primary">Profit %</span>
+                                <span class="badge bg-primary">Profit</span>
                                 <span style="background-color: #dee2e6;" class="badge text-black">Expense</span>
                             </div>
                         </div>
@@ -227,7 +227,7 @@
         new Chart(document.getElementById("chartjs-pie"), {
             type: "pie",
             data: {
-                labels: ["Profit %", "Expense"],
+                labels: ["Profit", "Expense"],
                 datasets: [{
                     data: chartData,
                     backgroundColor: [
