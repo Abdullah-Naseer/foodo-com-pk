@@ -6,6 +6,7 @@
     <!-- favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('public/assets/images/favicon.png') }}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="robots" content="noindex, nofollow">
     {{-- @if (isset($page->meta_title) || isset($page->title))
         <title>{{ $page->meta_title ?? $page->title }} |
             {{ $page->title ?? 'Foodo' }}</title>
@@ -13,7 +14,6 @@
         <title>@yield('title') | {{ $title ?? 'Foodo' }}</title>
     @endif
 
-    <meta name="robots" content="noindex, nofollow">
     <meta name="description" content="@yield('seo_description', isset($page->meta_description) ? $page->meta_description : '')">
     <meta name="keywords" content="@yield('meta_keywords', isset($page->meta_keywords) ? $page->meta_keywords : '')"> --}}
     {!! seo($SEOData) !!}
